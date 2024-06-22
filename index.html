@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Menu | Lordgrass.com</title>
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js"></script>
     <script src="js/jquery.js"></script>
 
-    <meta property="og:site_name" content="Onliine" />
+    <meta property="og:site_name" content="LordGrass.com" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Onliine Web" />
-	<meta property="og:description" content="Wii System simulator based on the latest version released by Nintendo" />
+	<meta property="og:title" content="LordGrass.com" />
+	<meta property="og:description" content="Official Website of Enadasa" />
 	<meta id="meta-image" property="og:image" itemprop="image" content="" />
 	<link rel="apple-touch-icon" href="" />
 	<meta name="author" content="JerosGamer89" />
-    <meta name="description" content="Wii System simulator based on the latest version released by Nintendo">
-	<meta name="keywords" content="riimake,onliine,wii,homebrew,wii simulator,wii menu,wii web" />
+    <meta name="description" content="Official Website of Enadasa">
+	<meta name="keywords" content="enadasa,lordgrass,youtube" />
     <meta name="theme-color" content="#222222" />
     <meta name="apple-mobile-web-app-status-bar" content="#222222" />
 </head>
@@ -25,7 +25,7 @@
     <div class="splash">
         <div>
             <img src="assets/return.gif" class="channels" />
-            <span class="tip"><strong>PRO TIP:</strong>&nbsp;Right-click to open the Wii pause menu</span>
+            <span class="tip"><strong>PRO TIP:</strong>&nbsp;Right-click to open the pause menu</span>
         </div>
     </div>
 
@@ -55,14 +55,14 @@
                 <div class="ch occupied" data-id="shop" data-href="/shop">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Wii Shop Channel</span>
+                    <span class="tag">Shop Channel</span>
                 </div>
                 <div class="ch occupied" data-id="news">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">News Channel</span>
                 </div>
-		<div class="ch occupied" data-id="homebrew">
+		<div class="ch occupied" data-id="senate">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">The Senate Channel</span>
@@ -99,17 +99,17 @@
             <div class="lateral left">
                 <img src="assets/left-button.png" class="left-btn" />
                 <img src="assets/wii-button.png" class="wii-btn buttonlike" onclick="startAudio()" />
-                <span class="tag">Wii Settings</span>
+                <span class="tag">Settings</span>
             </div>
             <div class="info">
-                <span class="jg">Onliine</span>
+                <span class="jg">Lordgrass.com</span>
                 <span id="hour"></span>
                 <span id="date"></span>
             </div>
             <div class="lateral right">
                 <img src="assets/right-button.png" class="right-btn" />
                 <img src="assets/mail-button.png" class="diary-btn buttonlike" onclick="startAudio()" />
-                <span class="tag">Wii Message Board</span>
+                <span class="tag">Message Board</span>
             </div>
         </div>
     </div>
@@ -117,16 +117,15 @@
     <div class="msgboard">
         <div class="bg"></div>
         <div class="card buttonlike" onclick="letterIn()">
-            <img src="assets/petermiiffin-head.png" class="mii" /><br>
-            <span>Hello Lois</span>
+            <!--<img src="assets/petermiiffin-head.png" class="mii" /><br>-->
+            <span>Welcome to the homepage of Enadasa</span>
         </div>
         <div class="opened">
             <div class="memo">
-                <span class="title">Memo</span>
-                <img src="assets/petermiiffin-head.png" class="mii" title="Peter Miiffin lol" />
+                <span class="title">Welcome</span>
                 <div class="lines">
-                    <span>This is a nice sample letter,</span>
-                    <span>with multiple lines.</span>
+                    <span>I welcome you to</span>
+                    <span>Lordgrass.com</span>
                 </div>
             </div>
             <a class="alt-btn back">Back</a>
@@ -136,7 +135,7 @@
             <div class="lateral">
                 <img src="assets/right-button.png" class="right-btn" />
                 <img src="assets/backtomenu.png" class="back-btn backtowiimenu buttonlike" />
-                <span class="tag">Wii Menu</span>
+                <span class="tag">Menu</span>
             </div>
         </div>
     </div>
@@ -146,7 +145,7 @@
             <div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div>
             <img id="videoSpec" src="" />
             <div class="buttons">
-                <a class="buttonlike" onclick="menuReturn()">Wii Menu</a>
+                <a class="buttonlike" onclick="menuReturn()">Menu</a>
                 <a class="buttonlike letsago" onclick="start()">Start</a>
             </div>
         </div>
@@ -158,7 +157,7 @@
             <img src="assets/home-close.png" />
         </div>
         <div class="in-between">
-            <a class="buttonlike backtomenu">Wii Menu</a>
+            <a class="buttonlike backtomenu">Menu</a>
             <!-- <a class="buttonlike" onclick="window.location.reload()">Reset</a> -->
         </div>
         <div class="bar-bottom">
@@ -182,7 +181,7 @@
                         <img src="assets/power-empty.png" />
                     </div>
                 </div>
-                <div class="text">Wii Remote Settings</div>
+                <div class="text">Remote Settings</div>
             </div>
         </div>
     </div>
@@ -190,7 +189,7 @@
     <div class="returndialog">
         <div class="msgbox">
             <div class="text">
-                Return to the Wii Menu?<br>
+                Return to the Main Menu?<br>
                 (Anything not saved will be lost.)
             </div>
             <div class="actions">
@@ -217,7 +216,7 @@
 
     <div class="ui-sfx">
         <audio id="startup" src="audio/startup.mp3"></audio>
-        <audio id="bg-music" src="audio/bg-music.mp3" loop></audio>
+        <!--<audio id="bg-music" src="audio/bg-music.mp3" loop></audio>-->
         <audio id="hover" src="audio/button-hover.mp3"></audio>
         <audio id="select" src="audio/button-select.mp3"></audio>
         <audio id="zip" src="audio/zip.mp3"></audio>
