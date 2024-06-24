@@ -31,6 +31,7 @@ h2 {color: #333}
     padding: 2vh 3vh;
     display: grid;
     grid-template-columns: max-content auto;
+    
 }
 
 .titles .product img {

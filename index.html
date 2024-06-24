@@ -15,17 +15,17 @@
 	<meta property="og:description" content="Official Website of Enadasa" />
 	<meta id="meta-image" property="og:image" itemprop="image" content="" />
 	<link rel="apple-touch-icon" href="" />
-	<meta name="author" content="JerosGamer89" />
+	<meta name="author" content="Enadasa (Modifications only)" />
     <meta name="description" content="Official Website of Enadasa">
 	<meta name="keywords" content="enadasa,lordgrass,youtube" />
     <meta name="theme-color" content="#222222" />
     <meta name="apple-mobile-web-app-status-bar" content="#222222" />
 </head>
-<body>
+<body>    
     <div class="splash">
         <div>
             <img src="assets/return.gif" class="channels" />
-            <span class="tip"><strong>PRO TIP:</strong>&nbsp;Right-click to open the pause menu</span>
+            <span class="tip"><strong>TIP:</strong>&nbsp;Press the "P" key to open the pause menu</span>
         </div>
     </div>
 
@@ -42,32 +42,23 @@
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag" id="discTag">Disc Channel</span>
                 </div>
-                <div class="ch occupied" data-id="mii">
+                <div class="ch occupied" data-id="socials" data-href="socials/">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Mii Channel</span>
+                    <span class="tag">Social Channels</span>
                 </div>
-                <div class="ch occupied" data-id="photo">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Photo Channel</span>
-                </div>
-                <div class="ch occupied" data-id="shop" data-href="/shop">
+                <div class="ch occupied" data-id="shop" data-href="shop/">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">Shop Channel</span>
                 </div>
-                <div class="ch occupied" data-id="news">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">News Channel</span>
-                </div>
-		<div class="ch occupied" data-id="senate">
+		        <div class="ch occupied" data-id="senate" data-href="https://rumble.com/v52yho6-the-senate-channel.html">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">The Senate Channel</span>
                 </div>
-
+                <div class="ch blank"></div>
+                <div class="ch blank"></div>
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
@@ -97,17 +88,15 @@
     
         <div class="bottom-bar">
             <div class="lateral left">
-                <img src="assets/left-button.png" class="left-btn" />
                 <img src="assets/wii-button.png" class="wii-btn buttonlike" onclick="startAudio()" />
                 <span class="tag">Settings</span>
             </div>
-            <div class="info">
+            <div class="info" style="color: #47bbe3;">
                 <span class="jg">Lordgrass.com</span>
                 <span id="hour"></span>
                 <span id="date"></span>
             </div>
             <div class="lateral right">
-                <img src="assets/right-button.png" class="right-btn" />
                 <img src="assets/mail-button.png" class="diary-btn buttonlike" onclick="startAudio()" />
                 <span class="tag">Message Board</span>
             </div>
@@ -117,15 +106,13 @@
     <div class="msgboard">
         <div class="bg"></div>
         <div class="card buttonlike" onclick="letterIn()">
-            <!--<img src="assets/petermiiffin-head.png" class="mii" /><br>-->
             <span>Welcome to the homepage of Enadasa</span>
         </div>
         <div class="opened">
             <div class="memo">
                 <span class="title">Welcome</span>
                 <div class="lines">
-                    <span>I welcome you to</span>
-                    <span>Lordgrass.com</span>
+                    <span>I humbly welcome you to this website.</span>
                 </div>
             </div>
             <a class="alt-btn back">Back</a>
@@ -133,7 +120,6 @@
         <div class="bottom">
             <span id="date2"></span>
             <div class="lateral">
-                <img src="assets/right-button.png" class="right-btn" />
                 <img src="assets/backtomenu.png" class="back-btn backtowiimenu buttonlike" />
                 <span class="tag">Menu</span>
             </div>
@@ -158,7 +144,7 @@
         </div>
         <div class="in-between">
             <a class="buttonlike backtomenu">Menu</a>
-            <!-- <a class="buttonlike" onclick="window.location.reload()">Reset</a> -->
+            <a class="buttonlike" onclick="window.location.reload()">Reset</a>
         </div>
         <div class="bar-bottom">
             <img src="assets/remote.png" class="remote" />
@@ -215,8 +201,7 @@
     </div>
 
     <div class="ui-sfx">
-        <audio id="startup" src="audio/startup.mp3"></audio>
-        <!--<audio id="bg-music" src="audio/bg-music.mp3" loop></audio>-->
+        
         <audio id="hover" src="audio/button-hover.mp3"></audio>
         <audio id="select" src="audio/button-select.mp3"></audio>
         <audio id="zip" src="audio/zip.mp3"></audio>
@@ -332,10 +317,11 @@
 
         // HOME/PAUSE MENU
         if (document.addEventListener) {
-            document.addEventListener('contextmenu', function(e) {
-                bgmusPause(); homeIn();
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "p") {
+                    homeIn();
+                }
                 $(".home-menu").css("display", "grid");
-                e.preventDefault();
             }, false);
         }
         else {
@@ -362,39 +348,6 @@
         $(".closedialog").click(event => {
             $(".returndialog").css("display", "none");
         });
-
-        // INSERT DISC FUNCTIONS (SNEAKY)
-        function homebrew() {
-            $("#discTag").text("Homebrew Channel");
-            $(".spinnin").addClass("disc-insert-anim");
-            var discCh= $('.ch.occupied[data-id="disc"]');
-            discCh.find('iframe').attr('src', 'channelart/homebrew/channel.html');
-            discCh.attr('data-id', 'homebrew');
-            return("Homebrew Channel unlocked (in the works)");
-        }
-
-        function bottomgear() {
-            $("#discTag").text("BOTTOM GEAR™");
-            $(".spinnin").addClass("disc-insert-anim");
-            var discCh = $('.ch.occupied[data-id="disc"]');
-            discCh.find('iframe').attr('src', 'channelart/bottomgear/channel.html');
-            discCh.attr('data-id', 'bottomgear');
-            return("WELCOME TO BO'OM GEAR MATES (in the works)");
-        }
-
-        function eject() {
-            $("#discTag").text("Disc Channel");
-            $(".spinnin").removeClass("disc-insert-anim");
-            var discCh = $('.ch.occupied[data-id="homebrew"]');
-            discCh.find('iframe').attr('src', 'channelart/disc/channel.html');
-            discCh.attr('data-id', 'disc');
-
-            var discCh = $('.ch.occupied[data-id="bottomgear"]');
-            discCh.find('iframe').attr('src', 'channelart/disc/channel.html');
-            discCh.attr('data-id', 'disc');
-
-            return("Disc ejected");
-        }
 
         // SETTINGS
         $(document).ready(() => {

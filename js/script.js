@@ -99,34 +99,3 @@ function letterIn() {
     var audio = document.getElementById("letterIn");
     audio.play();
 }
-
-// AUDIO AUTOPLAY
-setTimeout(() => {
-    var music = document.getElementById('startup');
-    music.volume = 0.2;
-    var promise = music.play();
-    if (promise !== undefined) {
-        promise.then(_ => {
-            console.log('start up sound');
-        }).catch(error => {
-            console.log('FAILED AT start up sound');
-            music.muted = true;
-            music.play();
-            music.muted = false;
-        });
-    }
-
-    var music = document.getElementById('bg-music');
-    music.volume = 0.2;
-    var promise = music.play();
-    if (promise !== undefined) {
-        promise.then(_ => {
-            console.log('background music on loop play');
-        }).catch(error => {
-            console.log('FAILED AT bg music loop');
-            music.muted = true;
-            music.play();
-            music.muted = false;
-        });
-    }
-}, 3000);
