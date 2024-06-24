@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="../css/shop.css" />
     <script src="../js/script.js"></script>
     <script src="../js/jquery.js"></script>
-    <style>body {animation: fadeIn 500ms linear forwards}</style>
+    <style>
+        body {animation: fadeIn 500ms linear forwards}
+    </style>
 </head>
-<body style="height: fit-content;">
+<body style="overflow-y: scroll;">
     <div class="header">Shop Channel</div>
     <h2>Titles you've installed</h2>
+    <p style="padding: 0 20vw;">Titles with a <span style="color: red;">RED</span> download button are downloadable</p>
     <div class="titles">
         <div class="product">
             <img src="../assets/channels/senate/video.gif" />
@@ -32,7 +35,7 @@
                 <span class="title">The Grass Skin-Pack</span><hr>
                 <span class="method">Minecraft Skin Pack</span><br>
                 <span class="belonging">Zip Archive File</span><br>
-                <span><a href="products/GrassPack.zip">Download</a></span>
+                <span style="color: red;"><a href="products/GrassPack.zip">Download</a></span>
             </div>
         </div>
         <div class="product">
@@ -41,21 +44,29 @@
                 <span class="title">The Yahoshi Skin-Pack</span><hr>
                 <span class="method">Minecraft Skin Pack</span><br>
                 <span class="belonging">Zip Archive File</span><br>
-                <span><a href="products/YahoshiPack.zip">Download</a></span>
+                <span style="color: red;"><a href="products/YahoshiPack.zip">Download</a></span>
+            </div>
+        </div>
+        <div class="product">
+            <img src="products/Yahoshidl.png" />
+            <div>
+                <span class="title">Required mods for the Minecraft server</span><hr>
+                <span class="method">Minecraft Modpack</span><br>
+                <span class="belonging">Zip Archive File</span><br>
+                <span style="color: red;"><a href="https://1drv.ms/u/s!AhXLzKtobawChJRmFIltlpsXaeOVbg?e=yzNFty">Download</a></span><br>
+                <span class="method">Download password is 123%
             </div>
         </div>
     </div>
-    <div class="bottom">
-        <a href="../index.html" class="buttonlike">Main Menu</a>
     </div>
 
-    <div class="home-menu">
+    <div style="position: fixed;" class="home-menu">
         <div class="bar-top close-pause-menu">
             <span>HOME Menu</span>
             <img src="../assets/home-close.png" />
         </div>
         <div class="in-between">
-            <a class="buttonlike backtomenu">Wii Menu</a>
+            <a class="buttonlike backtomenu">Main Menu</a>
             <a class="buttonlike" onclick="window.location.reload()">Reset</a>
         </div>
         <div class="bar-bottom">
@@ -83,7 +94,7 @@
             </div>
         </div>
     </div>
-    <div class="returndialog">
+    <div style="position: fixed;" class="returndialog">
         <div class="msgbox">
             <div class="text">
                 Return to the Wii Menu?<br>
@@ -122,12 +133,10 @@
             }, 250);
             bgmus(); homeOut();
         });
-
         $(".backtomenu").click(event => {
             $(".returndialog").css("display", "flex");
             rm1();
         });
-
         $(".closedialog").click(event => {
             $(".returndialog").css("display", "none");
         });
