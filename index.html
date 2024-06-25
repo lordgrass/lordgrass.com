@@ -20,10 +20,10 @@
     <meta name="theme-color" content="#222222" />
     <meta name="apple-mobile-web-app-status-bar" content="#222222" />
 </head>
-<body>    
+<body>       
     <div class="splash">
+        <img src="assets/return.gif" class="channels" />
         <div>
-            <img src="assets/return.gif" class="channels" />
             <span class="tip"><strong>TIP:</strong>&nbsp;Press the "P" key to open the pause menu</span>
         </div>
     </div>
@@ -41,12 +41,7 @@
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag" id="discTag">Disc Channel</span>
                 </div>
-                <div class="ch occupied" data-id="socials" data-href="social.html">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Social Channel</span>
-                </div>
-                <div class="ch occupied" data-id="shop" data-href="shop/">
+                <div class="ch occupied" data-id="shop" data-href="shop">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">Shop Channel</span>
@@ -56,11 +51,36 @@
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">The Senate Channel</span>
                 </div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
-                <div class="ch blank"></div>
+                <div class="ch occupied" data-id="youtube" data-href="https://www.youtube.com/@enadasa">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Main YouTube</span>
+                </div>
+                <div class="ch occupied" data-id="youtubealt" data-href="https://www.youtube.com/@memelordena">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Memes Channel</span>
+                </div>
+                <div class="ch occupied" data-id="rumble" data-href="https://rumble.com/c/c-5451640">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Rumble Channel</span>
+                </div>
+                <div class="ch occupied" data-id="twitch" data-href="https://www.twitch.tv/enadasa">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Twitch Channel</span>
+                </div>
+                <div class="ch occupied" data-id="kick" data-href="https://kick.com/enadasa">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Kick Channel</span>
+                </div>
+                <div class="ch occupied" data-id="blog" data-href="https://enadasa.vivaldi.net">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Blog</span>
+                </div>
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
@@ -105,13 +125,18 @@
     <div class="msgboard">
         <div class="bg"></div>
         <div class="card buttonlike" onclick="letterIn()">
-            <span>Welcome to the homepage of Enadasa</span>
+            <span>Welcome to Lordgrass.com</span>
         </div>
         <div class="opened">
             <div class="memo">
                 <span class="title">Welcome</span>
                 <div class="lines">
                     <span>I humbly welcome you to this website.</span>
+                    <span><h2>Commit 8</h2></span>
+                    <span>Below are the change notes as of after commit 7:</span>
+                    <span>1. Removed & merged the social page into the homepage</span>
+                    <span>2. Bug 0001 - Fixed a problem with the bottom row of channels which caused the tag displayed when channel is hovered over to not display properly</span>
+                    <span>3. Added the change notes.</span>
                 </div>
             </div>
             <a class="alt-btn back">Back</a>
@@ -200,6 +225,7 @@
     </div>
 
     <div class="ui-sfx">
+        <audio id="startup" src="audio/startup.mp3"></audio>
         <audio id="hover" src="audio/button-hover.mp3"></audio>
         <audio id="select" src="audio/button-select.mp3"></audio>
         <audio id="zip" src="audio/zip.mp3"></audio>

@@ -9,7 +9,7 @@ function showDateTime() {
     var monthNames = ["1","2","3","4","5","6","7","8","9","10","11","12"];
     var dayName = dayList[date.getDay()];
     var monthName = monthNames[date.getMonth()];
-    var today = `${dayName} ${date.getDate()}/${monthName}`;
+    var today = `${dayName} ${monthName}/${date.getDate()}`;
   
     var hour = date.getHours();
     var min = date.getMinutes().toString().padStart(2, '0');
