@@ -151,22 +151,15 @@ a, button {
 }
 
 .bottom-bar .lateral {
-    background-image: url('../assets/bottom-bg.png');
-    background-repeat: repeat-x;
-    background-size: contain;
     height: 100%;
     position: relative;
     display: flex;
-    justify-content: left;
     align-items: center;
-}
-
-.bottom-bar .lateral.right {
-    justify-content: right !important;
 }
 
 .bottom-bar .lateral .left-btn {
     position: absolute;
+    justify-content: left;
     left: 0;
     width: 22vh;
 }
@@ -174,13 +167,13 @@ a, button {
 .bottom-bar .lateral .wii-btn {
     height: 65%;
     position: absolute;
-    left: 7vh;
+    left: 7vh; 
 }
 
 .bottom-bar .lateral .right-btn {
     position: absolute;
     right: 0;
-    width: 22vh;
+    width: 22vh; justify-content: right;
 }
 
 .bottom-bar .lateral .diary-btn {
@@ -221,11 +214,7 @@ a, button {
 }
 
 .bottom-bar .info {
-    background-image: url('../assets/bottom-title.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
-    pointer-events: none;
+    pointer-events: none;    
 }
 
 .bottom-bar .info .jg,
@@ -234,7 +223,7 @@ a, button {
 }
 
 .bottom-bar .info .jg {
-    color: #47bbe3;
+    color: red;
     animation: fadeOut 250ms ease-in-out 6s forwards;
     position: absolute;
     left: 50%;
@@ -264,7 +253,7 @@ a, button {
     opacity: 0;
     animation: fadeIn 250ms linear 3.2s forwards;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     padding-inline: calc((98vw - 18vw * 4) / 2);
     overflow-x: scroll;
     animation-duration: 1ms;
@@ -350,25 +339,29 @@ a, button {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 15px;
     margin-top: 7vh;
+    border-radius: 15px;
+    
 }
 
 .ch-c .ch {
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: center;
     aspect-ratio: 16/9; /* previously 1161/639 */
 }
 
 .ch-c .ch.blank {
-    background-image: url('../assets/channel-spritesheet.png');
-    background-size: calc(100% * 3) 100%;
-    animation: chblank 0.3s steps(3) infinite;
+    height: 90%; width: 90%;
+    background-size: calc(100 * 3) 100%;
+    animation: chblank 5s infinite;
     position: relative;
+    border-radius: 15px; border: 5px solid red;
+
 }
 
 @keyframes chblank {
-    from {background-position-x: 0px;}
-    to {background-position-x: calc(50% * 3 - 1px);}
+    0% {background-color: black;}
+    50% {background-color: #0a356b;}
+    100% {background-color: black;}
 }
 
 .ch-c .ch.occupied {
@@ -377,48 +370,42 @@ a, button {
 
 .ch-c .ch.occupied img,
 .ch-c .ch.occupied iframe {
-    width: 101%; height: 100%;
+    width: 90%; height: 90%;
     object-fit: cover;
-    position: relative;
-    clip-path: polygon(2% 7%, 6% 2%, 52% 1%, 95% 3%,
-    98% 8%, 100% 49%, 98% 92%, 95% 97%, 50% 99%, 5% 97%,
-    2% 93%, 0 50%);
+    position: absolute;
+    border-radius: 15px; border: 5px solid red;
 }
-
+.ch-c .ch.ch.occupied:hover iframe {
+    border-color: var(--blue); border-style: dashed; border-width: 5px;
+}
 .ch-c .ch.occupied::after {
     position: absolute;
     inset: 0;
-    width: 102%; height: 94%;
+    width: 90%; height: 90%;
     content: '';
-    background-image: url('../assets/channel-border.png');
-    background-size: 100% 100%;
 }
 
 .ch-c .ch.occupied .onhover {
     position: absolute;
     top: 0; left: 0;
-    width: 101%; height: 94%;
+    width: 90%; height: 90%;
     content: '';
-    background-image: url('../assets/channel-hover.png');
-    background-size: 100% 100%;
+    background-size: calc(100% * 3) 100%;
     opacity: 0;
     transition: 400ms ease;
-    transform: scale(0.94);
     z-index: 2;
 }
 
 .ch-c .ch.occupied .onhover:hover {
     display: block;
     opacity: 1;
-    transform: scale(1.02);
 }
 
 .ch-c .ch.blank::before {
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 100%;
+    width: 90%; height: 90%;
     content: '';
-    background-image: url('../assets/channel-wiilogo.png');
     background-size: cover;
     background-position: center;
 }
@@ -426,10 +413,7 @@ a, button {
 .ch-c .ch.blank::after {
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 100%;
     content: '';
-    background-image: url('../assets/channel-border.png');
-    background-size: 100% 100%;
 }
 
 .ch-trans-on {
@@ -495,7 +479,6 @@ body:has(.main-menu.ch-trans-on) .ch-selection {
 }
 
 .ch-c .ch.occupied .onhover:hover ~ span.tag {
-    transform: translateX(-50%) scale(1);
     opacity: 1;
     transition: 250ms ease-out;
     transition-delay: 500ms;

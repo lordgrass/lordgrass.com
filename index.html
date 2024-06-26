@@ -29,14 +29,13 @@
     </div>
 
     <div  class="main-menu">
+        <div style="padding: 2%; color: red;" id="date"></div>
         <div class="grid">
             <div class="prev">
                 <img src="assets/prev-default.png" class="def" />
-                <img src="assets/prev-hover.png" class="hover" />
             </div>
             <div class="ch-c">
                 <div class="ch occupied" data-id="disc">
-                    <img src="channelart/disc/disc.png" class="spinnin" />
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag" id="discTag">Disc Channel</span>
@@ -106,7 +105,6 @@
                 <div class="ch blank"></div>
             </div>
             <div class="next">
-                <img src="assets/next-hover.png" class="hover" />
                 <img src="assets/next-default.png" class="def" />
             </div>
         </div>
@@ -116,10 +114,10 @@
                 <img src="assets/wii-button.png" class="wii-btn buttonlike" onclick="startAudio()" />
                 <span class="tag">Settings</span>
             </div>
-            <div class="info" style="color: #47bbe3;">
+            <div class="info" style="color: red;">
                 <span class="jg">Lordgrass.com</span>
                 <span id="hour"></span>
-                <span id="date"></span>
+                
             </div>
             <div class="lateral right">
                 <img src="assets/mail-button.png" class="diary-btn buttonlike" onclick="startAudio()" />
@@ -148,13 +146,17 @@
 <div class="msgboard">
     <div class="bg"></div>
     <div class="card buttonlike" onclick="letterIn()">
-        <span>Welcome to the homepage of Enadasa</span>
+        <span>Version 24.06 C. 11</span>
     </div>
     <div class="opened">
         <div class="memo">
-            <span class="title">Read Me!</span>
+            <span class="title">Change Notes for V 24.06 C. 11</span>
             <div class="lines">
-                <span><h3>Change Notes: Coming Soon</h3></span>
+                <span>
+                    Modernized more of the website-ui. This website while intended by the original
+                    Authors to be a faithful recreation of the original Wii's UI, has been customized
+                    by me to suit my needs.
+                </span>
             </div>
         </div>
         <a class="alt-btn back">Back</a>
@@ -162,7 +164,7 @@
     <div class="bottom">
         <span id="date2"></span>
         <div class="lateral">
-            <img src="assets/backtomenu.png" class="back-btn backtowiimenu buttonlike" />
+            <img src="assets/wii-button.png" class="back-btn backtowiimenu buttonlike" />
             <span class="tag">Menu</span>
         </div>
     </div>
