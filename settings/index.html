@@ -1,14 +1,3 @@
-<!--
-
-    If you're the administrator of this site,
-    it's better to not touch anything here.
-    This page is (at the moment) mainly used
-    for version sync with my servers and updating.
-
-    Visit the GitHub repository for more information.
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,37 +62,19 @@
     <div class="settings">
         <div class="settings-content">
             <div class="topbar">
-                <div class="header">Wii System Settings <gray>(WIP)</gray></div>
+                <div class="header">Website Settings <gray>(WIP)</gray></div>
                 <div class="version">Ver 4.3E</div>
             </div>
             <div class="ver">
-                Website version&nbsp;<span id="versionprint">a</span><br>
-                Onliine latest available: <span id="updatedver"></span><br>
+                Website version&nbsp;24.06 C. 8<br>
+                Based on Onliine latest available: <span id="updatedver"></span><br>
                 Based upon Wii System 4.3E
             </div>
             <div class="bottombar">
                 <a class="alt-btn" href="/">Back</a>
-                <a class="alt-btn" href="#" target="_blank">GitHub</a>
+                <a class="alt-btn" href="https://github.com/lordgrass/enawebsite">GitHub</a>
             </div>
         </div>
     </div>
-    <script>
-        const url = "//jerosgamer.me/res/sysver.txt";
-        const localver = "1.0";
-        document.getElementById("versionprint").textContent = localver;
-
-        $.get(url, function(fileContent) {
-            document.getElementById("updatedver").textContent = fileContent.trim();
-            if (fileContent.trim() === localver.trim()) {
-                console.log("Update checked: system is up to date");
-            }
-            else if (fileContent.trim() <= localver.trim()) {
-                alert("bro do be living in the future, you're running on a version that hasn't been released yet lol");
-            }
-            else {
-                alert("There's an update available for Wii System.\nPlease contact the administrator to perform the update.\n\nLatest available: " + fileContent.trim() + "\nYou're running on: " + localver);
-            }
-        });
-    </script>
 </body>
 </html>
