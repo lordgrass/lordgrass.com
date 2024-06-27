@@ -106,7 +106,7 @@ a, button {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: white;
-    z-index: 1000;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,6 +148,7 @@ a, button {
     grid-template-columns: 20vw auto 20vw;
     align-items: center;
     text-align: center;
+    z-index: 20;
 }
 
 .bottom-bar .lateral {
