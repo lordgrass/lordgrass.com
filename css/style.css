@@ -56,7 +56,7 @@
 body {
     padding: 0; margin: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: white;
     color: #000000;
     font-family: 'Regular';
     font-size: 2vh;
@@ -105,7 +105,7 @@ a, button {
 .splash {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: black;
+    background-color: white;
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -371,7 +371,7 @@ a, button {
 .ch-c .ch.occupied img,
 .ch-c .ch.occupied iframe {
     width: 90%; height: 90%;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     border-radius: 15px; border: 5px solid red;
 }
@@ -517,6 +517,7 @@ body:has(.main-menu.ch-trans-on) .ch-selection {
 .ch-selection .thecontent {
     width: max-content;
     position: relative;
+    border: 7px solid red;
 }
 
 .ch-selection .thecontent img {
@@ -527,43 +528,9 @@ body:has(.main-menu.ch-trans-on) .ch-selection {
     animation-fill-mode: forwards;
 }
 
-.ch-selection .thecontent .tl,
-.ch-selection .thecontent .tr,
-.ch-selection .thecontent .bl,
-.ch-selection .thecontent .br {
-    background-size: contain;
-    background-repeat: no-repeat;
-    aspect-ratio: 1/1;
-    width: 15vw;
-    position: absolute;
-}
-
-.ch-selection .thecontent .tl {
-    background-image: url('../assets/border-topleft.png');
-    top: -1px; left: -1px;
-}
-
-.ch-selection .thecontent .tr {
-    background-image: url('../assets/border-topright.png');
-    top: -1px; right: -1px;
-}
-
-.ch-selection .thecontent .bl {
-    background-image: url('../assets/border-bottomleft.png');
-    bottom: -1px; left: -1px;
-    background-position: bottom center;
-}
-
-.ch-selection .thecontent .br {
-    background-image: url('../assets/border-bottomright.png');
-    bottom: -1px; right: -1px;
-    background-position: bottom center;
-}
-
 .ch-selection .thecontent .buttons {
     background-image: url('../assets/splash-bar.png');
     background-size: 4px;
-    border-top: 0px solid black;
     margin-top: 0;
     height: 17vh;
     display: flex;
@@ -929,42 +896,12 @@ too sick to be seen
 }
 
 a.alt-btn  {
-    background-image: url('../assets/alt-btn-texture.png');
-    background-size: contain;
-    background-repeat: repeat-x;
     padding-top: 0.8vh;
     padding-inline: 1vh;
     height: 10vh;
-    color: #444;
     font-size: 4.5vh;
-    text-align: center;
     cursor: inherit;
     position: relative;
-    transition: 150ms;
-}
-
-a.alt-btn::before {
-    content: '';
-    background-image: url('../assets/alt-btn-left.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 5vw;
-    position: absolute;
-    top: 0;
-    left: -2.6vw;
-}
-
-a.alt-btn::after {
-    content: '';
-    background-image: url('../assets/alt-btn-right.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 5vw;
-    position: absolute;
-    top: 0;
-    right: -4.9vw;
 }
 
 a.alt-btn:hover {
