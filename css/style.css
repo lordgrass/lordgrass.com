@@ -63,6 +63,21 @@ body {
     cursor: url('../assets/cursor.png'), auto;
 }
 
+.linkbar {
+    background-color: black;
+    color: white;
+    border-bottom: 5px solid red;
+    z-index: 1;
+}
+.linkbar a {
+    padding: .5%;
+    display: inline-block;
+}
+
+.linkbar a:hover {
+    border: 5px dashed #47bbe3;
+}
+
 .main-menu {
     background-image: url('../assets/bg.png');
     background-size: cover;
@@ -378,6 +393,7 @@ a, button {
 }
 .ch-c .ch.ch.occupied:hover iframe {
     border-color: var(--blue); border-style: dashed; border-width: 5px;
+    transform: scale(1.1);
 }
 .ch-c .ch.occupied::after {
     position: absolute;
