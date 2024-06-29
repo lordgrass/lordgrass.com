@@ -12,7 +12,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="LordGrass.com" />
 	<meta property="og:description" content="Official Website of Enadasa" />
-	<meta id="meta-image" property="og:image" itemprop="image" content="" />
+	<meta id="meta-image" property="og:image" itemprop="image" content="assets/favicon.png" />
 	<link rel="apple-touch-icon" href="" />
 	<meta name="author" content="Enadasa (Modifications only)" />
     <meta name="description" content="Official Website of Enadasa">
@@ -27,22 +27,22 @@
             <span style="color: white;" class="tip"><strong>TIP:</strong>&nbsp;Press the "P" key to open the pause menu</span>
         </div>
     </div>
-    
     <div  class="main-menu">
         <div class="linkbar">
-            <a href="https://enadasa.vivaldi.net">Blog</a>
+            <a>Admin Login (Not implemented)</a>
             <div style="padding: .5%; color: red; float: right;" id="date"></div>
         </div>
-        
         <div class="grid">
-            <div class="prev">
-                <img src="assets/prev-default.png" class="def" />
-            </div>
             <div class="ch-c">
                 <div class="ch occupied" data-id="disc">
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag" id="discTag">Disc Channel</span>
+                </div>
+                <div class="ch occupied" data-id="shop" data-href="shop">
+                    <iframe src=""></iframe>
+                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
+                    <span class="tag">Shop Channel</span>
                 </div>
 		        <div class="ch occupied" data-id="senate" data-href="https://rumble.com/v52yho6-the-senate-channel.html">
                     <iframe src=""></iframe>
@@ -53,11 +53,6 @@
                     <iframe src=""></iframe>
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">Main YouTube</span>
-                </div>
-                <div class="ch occupied" data-id="shop" data-href="shop">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Shop Channel</span>
                 </div>
                 <!--<div class="ch occupied" data-id="youtubealt" data-href="https://www.youtube.com/@memelordena">
                     <iframe src=""></iframe>
@@ -106,17 +101,12 @@
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
-                <!--<div class="ch occupied" data-id="administration" data-href="settings/admin/login.php">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Administration Channel</span>
-                </div>-->
-            </div>
-            <div class="next">
-                <img src="assets/next-default.png" class="def" />
             </div>
         </div>
-
+        <div class="Navigation">
+            <img src="assets/prev-default.png" class="prev" />
+            <img src="assets/next-default.png" class="next" />
+        </div>
         <div class="bottom-bar">
             <div class="lateral left">
                 <img src="assets/wii-button.png" class="wii-btn buttonlike" onclick="startAudio()" />
@@ -125,7 +115,6 @@
             <div class="info" style="color: red;">
                 <span class="jg">Lordgrass.com</span>
                 <span id="hour"></span>
-                
             </div>
             <div class="lateral right">
                 <img src="assets/mail-button.png" class="diary-btn buttonlike" onclick="startAudio()" />
@@ -154,16 +143,14 @@
 <div class="msgboard">
     <div class="bg"></div>
     <div class="card buttonlike" onclick="letterIn()">
-        <span>Version 24.06 C. 11</span>
+        <span>Version 24.06 C. 16</span>
     </div>
     <div class="opened">
         <div class="memo">
-            <span class="title">Change Notes for V 24.06 C. 11</span>
+            <span class="title">Change Notes for V 24.06 C. 16</span>
             <div class="lines">
                 <span>
-                    Modernized more of the website-ui. This website while intended by the original
-                    Authors to be a faithful recreation of the original Wii's UI, has been customized
-                    by me to suit my needs.
+                    Begun work on adding new features. The readme file will be used inplace of this page eventually.
                 </span>
             </div>
         </div>
@@ -360,15 +347,11 @@
     $('.prev').on('click', function() {
         nextprev();
         $('.grid').animate({ scrollLeft: '-=' + $('.grid').width() }, 0);
-        $(".prev").css("display", "none");
-        $(".next").css("display", "flex");
     });
 
     $('.next').on('click', function() {
         nextprev();
         $('.grid').animate({ scrollLeft: '+=' + $('.grid').width() }, 0);
-        $(".next").css("display", "none");
-        $(".prev").css("display", "flex");
         
     });
 
