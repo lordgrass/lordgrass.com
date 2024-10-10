@@ -17,19 +17,11 @@
 	<meta name="author" content="Enadasa (Modifications only)" />
     <meta name="description" content="Official Website of Enadasa">
 	<meta name="keywords" content="enadasa,lordgrass,youtube" />
-    <meta name="theme-color" content="#222222" />
-    <meta name="apple-mobile-web-app-status-bar" content="#222222" />
 </head>
 <body>       
-    <div class="splash">
-        <img style="height: 100%; width: 100%;" src="assets/return.gif"> 
-        <div>
-            <span style="color: white;" class="tip"><strong>TIP:</strong>&nbsp;Press the "P" key to open the pause menu</span>
-        </div>
-    </div>
     <div  class="main-menu">
         <div class="linkbar">
-            <a href="https://lordgrass.com/blog">Blog</a>
+            <a href="https://enadasa.vivaldi.net">Blog</a>
             <div style="padding: .5%; color: red; float: right;" id="date"></div>
         </div>
         <div class="grid">
@@ -54,31 +46,6 @@
                     <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
                     <span class="tag">Main YouTube</span>
                 </div>
-                <!--<div class="ch occupied" data-id="youtubealt" data-href="https://www.youtube.com/@memelordena">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Memes Channel</span>
-                </div>
-                <div class="ch occupied" data-id="rumble" data-href="https://rumble.com/c/c-5451640">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Rumble Channel</span>
-                </div>
-                <div class="ch occupied" data-id="twitch" data-href="https://www.twitch.tv/enadasa">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Twitch Channel</span>
-                </div>
-                <div class="ch occupied" data-id="kick" data-href="https://kick.com/enadasa">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Kick Channel</span>
-                </div>
-                <div class="ch occupied" data-id="blog" data-href="https://enadasa.vivaldi.net">
-                    <iframe src=""></iframe>
-                    <div class="onhover" onmouseover="hover()" onclick="zip()"></div>
-                    <span class="tag">Blog</span>
-                </div>-->
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
                 <div class="ch blank"></div>
@@ -109,16 +76,16 @@
         </div>
         <div class="bottom-bar">
             <div class="lateral left">
-                <img src="assets/wii-button.png" class="wii-btn buttonlike" onclick="startAudio()" />
-                <span class="tag">Settings</span>
+                <img src="assets/wii-button.png" class="wii-btn buttonlike" />
+                <span class="tag">Logo</span>
             </div>
-            <div class="info" style="color: red;">
+            <div class="info" style="color: #33ccff;">
                 <span class="jg">Lordgrass.com</span>
                 <span id="hour"></span>
             </div>
             <div class="lateral right">
                 <img src="assets/mail-button.png" class="diary-btn buttonlike" onclick="startAudio()" />
-                <span class="tag">Message Board</span>
+                <span class="tag">Update Notes</span>
             </div>
         </div>
     </div>
@@ -143,14 +110,14 @@
 <div class="msgboard">
     <div class="bg"></div>
     <div class="card buttonlike" onclick="letterIn()">
-        <span>Version 24.06 C. 16</span>
+        <span>Version 24.10 C. 20</span>
     </div>
     <div class="opened">
         <div class="memo">
-            <span class="title">Change Notes for V 24.06 C. 16</span>
+            <span class="title">Change Notes for V 24.10 C. 20</span>
             <div class="lines">
                 <span>
-                    Begun work on adding new features. The readme file will be used inplace of this page eventually.
+                    Removed more bloat, should decrease load time!
                 </span>
             </div>
         </div>
@@ -162,71 +129,6 @@
             <img src="assets/wii-button.png" class="back-btn backtowiimenu buttonlike" />
             <span class="tag">Menu</span>
         </div>
-    </div>
-</div>
-
-<div class="home-menu">
-    <div class="bar-top close-pause-menu">
-        <span>HOME Menu</span>
-        <img src="assets/home-close.png" />
-    </div>
-    <div class="in-between">
-        <a class="buttonlike backtomenu">Menu</a>
-        <a class="buttonlike" onclick="window.location.reload()">Reset</a>
-    </div>
-    <div class="bar-bottom">
-        <img src="assets/remote.png" class="remote" />
-        <div>
-            <div class="battery">
-                <div>
-                    <span>P1</span>
-                    <img src="assets/power-full.png" />
-                </div>
-                <div>
-                    <span>P2</span>
-                    <img src="assets/power-empty.png" />
-                </div>
-                <div>
-                    <span>P3</span>
-                    <img src="assets/power-empty.png" />
-                </div>
-                <div>
-                    <span>P4</span>
-                    <img src="assets/power-empty.png" />
-                </div>
-            </div>
-            <div class="text">Remote Settings</div>
-        </div>
-    </div>
-</div>
-
-<div class="returndialog">
-    <div class="msgbox">
-        <div class="text">
-            Return to the Main Menu?<br>
-            (Anything not saved will be lost.)
-        </div>
-        <div class="actions">
-            <a onclick="rm2();">Yes</a>
-            <a class="closedialog">No</a>
-        </div>
-    </div>
-</div>
-
-<div class="settings">
-    <div class="settings-content">
-        <div class="topbar">
-            <img src="assets/favicon.png" />
-        </div>
-        <div class="cells">
-            <a class="info buttonlike" href="credits/" target="_blank"></a>
-            <a class="stngs buttonlike" href="settings/"></a>
-        </div>
-        <div class="bottombar">
-            <a class="alt-btn close"><img src="assets/back.png" /></a>
-        </div>
-    </div>
-</div>
 
 <div class="ui-sfx">
     <audio id="hover" src="audio/button-hover.mp3"></audio>
@@ -389,20 +291,6 @@
         $(".returndialog").css("display", "none");
     });
 
-    // SETTINGS
-    $(document).ready(() => {
-        $(".wii-btn").click(() => {
-            $(".settings").css("display", "block");
-            setTimeout(() => {$(".settings-content").fadeIn();}, 1000);
-            $(".grid").fadeOut();
-        });
-
-        $(".close").click(() => {
-            $(".grid").fadeIn();
-            $(".settings-content").fadeOut();
-            setTimeout(() => {$(".settings").fadeOut();}, 3500);
-        });
-    });
 </script>
 </body>
 </html>
