@@ -4,7 +4,7 @@
 }
 .Navigation {
     transform: scale(80%);
-    width: 40%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -94,7 +94,6 @@ body {
 .linkbar a {
     padding: .5%;
     display: inline-block;
-    border-right: 5px solid red;
 }
 
 .linkbar a:hover {
@@ -247,11 +246,6 @@ a, button {
     transition: 250ms ease-out;
     transition-delay: 500ms;
 }
-
-.bottom-bar .info {
-    pointer-events: none;    
-}
-
 .bottom-bar .info .jg,
 .bottom-bar .info #hour {
     font-size: 2.5em;
@@ -465,12 +459,6 @@ body:has(.main-menu.ch-trans-on) .ch-selection {
     transform: translateY(-50%);
     left: -100%;
     opacity: 0;
-}
-
-.disc-insert-anim {animation: disc-insert 300ms ease-out 1s forwards;}
-@keyframes disc-insert {
-    from {opacity: 0; left: -100%;}
-    to {opacity: 0.6; left: -40%;}
 }
 
 .ch-selection {
@@ -1140,7 +1128,7 @@ https://codepen.io/nelledejones/pen/gOOPWrK */
         padding: 0.5vh 2vw;
     }
     .bottom-bar {
-        height: 25vh;
+        height: 25vh; background-color: black;
     }
     .bottom-bar .lateral .left-btn,
     .bottom-bar .lateral .right-btn {

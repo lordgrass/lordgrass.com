@@ -40,13 +40,12 @@ body {
     animation: logo 15s linear infinite;
 }
 @keyframes logo {
-    0% {opacity: 0;}
+    0% {opacity: 0; background-color: black;}
     40% {opacity: 0;}
-    50% {opacity: 1;}
+    50% {opacity: 1; background-color: #0a356b;}
     90% {opacity: 1;}
-    100% {opacity: 0;}
+    100% {opacity: 0; background-color: black;}
 }
-
 .logo span {
     font-family: 'Bold';
     letter-spacing: -0.5vh;
