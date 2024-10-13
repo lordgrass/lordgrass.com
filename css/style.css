@@ -3,17 +3,17 @@
     --blue: #3bb7ff;
 }
 .Navigation {
-    transform: scale(80%);
-    width: 50%;
+    transform: scale(55%);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: auto;
 }
 .Navigation .prev {
     float: inline-start;
 }
 
 .Navigation .prev:hover {
-    transform: scale(82%)
+    transform: scale(120%)
 }
 
 .Navigation .next {
@@ -21,7 +21,7 @@
 }
 
 .Navigation .next:hover {
-    transform: scale(82%)
+    transform: scale(120%)
 }
 
 @font-face {
@@ -175,13 +175,15 @@ a, button {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
     padding: 0; margin: 0;
     display: grid;
     grid-template-columns: 20vw auto 20vw;
     align-items: center;
     text-align: center;
     z-index: 20;
+    border-top: 5px solid red;
+    background-color: #000;
 }
 
 .bottom-bar .lateral {
@@ -303,7 +305,7 @@ a, button {
     grid-template-columns: 18vw 18vw 18vw 18vw;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 0px 15px;
-    margin-top: 7vh;
+    margin-top: 6vh;
     border-radius: 15px;
     
 }
@@ -477,19 +479,19 @@ body:has(.main-menu.ch-trans-on) .ch-selection {
 .ch-selection .thecontent {
     width: max-content;
     position: relative;
-    border: 7px solid red;
+    border: 8px solid red;
 }
 
 .ch-selection .thecontent img {
     width: 65vw;
     aspect-ratio: 16/9;
-    margin-bottom: -11px;
+    margin-bottom: -10px;
     pointer-events: none;
     animation-fill-mode: forwards;
 }
 
 .ch-selection .thecontent .buttons {
-    background-color: #888;
+    background-color: #0a356b;
     background-size: 4px;
     margin-top: 0;
     height: 20vh;
@@ -971,7 +973,7 @@ https://codepen.io/nelledejones/pen/gOOPWrK */
 
 .msgboard .bottom #date2 {
     position: absolute;
-    bottom: 2vh;
+    bottom: 1vh;
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 2.5em;
