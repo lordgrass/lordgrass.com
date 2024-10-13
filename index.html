@@ -112,7 +112,7 @@
         <div class="thecontent">
             <div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div>
             <img id="videoSpec" src="" />
-            <div class="buttons">
+            <div class="buttons" style="border-top: 5px solid red;">
                 <a class="buttonlike" onclick="menuReturn()">Menu</a>
                 <a class="buttonlike letsago" onclick="start()">Start</a>
             </div>
@@ -148,10 +148,6 @@
     <audio id="zip" src="audio/zip.mp3"></audio>
     <audio id="back" src="audio/back.mp3"></audio>
     <audio id="start" src="audio/start.mp3"></audio>
-    <audio id="homeIn" src="audio/home-in.mp3"></audio>
-    <audio id="homeOut" src="audio/home-out.mp3"></audio>
-    <audio id="rm1" src="audio/returntomenu-1.mp3"></audio>
-    <audio id="rm2" src="audio/returntomenu-2.mp3"></audio>
     <audio id="nextprev" src="audio/nextprev.mp3"></audio>
     <audio id="letterIn" src="audio/letter-in.mp3"></audio>
     <audio id="chSpec" src=""></audio>
@@ -267,40 +263,6 @@
         nextprev();
         $('.grid').animate({ scrollLeft: '+=' + $('.grid').width() }, 0);
         
-    });
-
-    // HOME/PAUSE MENU
-    if (document.addEventListener) {
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "p") {
-                homeIn();
-            }
-            $(".home-menu").css("display", "grid");
-        }, false);
-    }
-    else {
-        document.attachEvent('oncontextmenu', function() {
-            alert("EXCEPTION HANDLED: Failed to open Home/Pause menu.\nPlease report any bugs to the Everybody Votes channel.");
-            window.event.returnValue = false;
-        });
-    }
-
-    $(".close-pause-menu").click(event => {
-        $(".home-menu").addClass("fadeOut");
-        setTimeout(() => {
-            $(".home-menu").css("display", "none");
-            $(".home-menu").removeClass("fadeOut");
-        }, 250);
-        bgmus(); homeOut();
-    });
-
-    $(".backtomenu").click(event => {
-        $(".returndialog").css("display", "flex");
-        rm1();
-    });
-
-    $(".closedialog").click(event => {
-        $(".returndialog").css("display", "none");
     });
 
 </script>
